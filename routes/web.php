@@ -35,6 +35,7 @@ Route::group([
     Route::get('home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
     Route::view('about', 'admin.about')->name('about');
     Route::get('users', [\App\Http\Controllers\UserController::class, 'index'])->name('users.index');
+    Route::resource('customizations', \App\Http\Controllers\CustomizationController::class);
 
 });
 

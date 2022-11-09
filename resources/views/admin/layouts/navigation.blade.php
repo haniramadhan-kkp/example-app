@@ -44,11 +44,11 @@
                     </path>
                 </svg>
             </span>
-            <span class="text">Two-level menu</span>
+            <span class="text">Pengaturan Website</span>
         </a>
         <ul id="ddmenu_1" class="dropdown-nav collapse" style="">
             <li>
-                <a href="#">Child menu</a>
+                <a href="{{route('admin.customizations.index')}}">Homepage</a>
             </li>
         </ul>
     </li>

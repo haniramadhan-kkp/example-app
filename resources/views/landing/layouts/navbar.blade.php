@@ -17,10 +17,10 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarCollapse">
         <div class="navbar-nav ms-auto py-4 py-lg-0">
-            <a href="{{route('home')}}" class="nav-item nav-link active">Home</a>
-            <a href="{{route('about')}}" class="nav-item nav-link">About</a>
-            <a href="{{route('service')}}" class="nav-item nav-link">Service</a>
-            <a href="{{route('roadmap')}}" class="nav-item nav-link">Roadmap</a>
+            <a href="{{route('home')}}" class="nav-item nav-link @if(request()->routeIs('home')) active @endif">Home</a>
+            <a href="{{route('about')}}" class="nav-item nav-link @if(request()->routeIs('about')) active @endif">About</a>
+            <a href="{{route('service')}}" class="nav-item nav-link @if(request()->routeIs('service')) active @endif">Service</a>
+            <a href="{{route('roadmap')}}" class="nav-item nav-link @if(request()->routeIs('roadmap')) active @endif">Roadmap</a>
             <div class="nav-item dropdown">
                 <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                 <div class="dropdown-menu shadow-sm m-0">
@@ -29,7 +29,7 @@
                     <a href="{{route('faq')}}" class="dropdown-item">FAQs</a>
                 </div>
             </div>
-            <a href="{{route('contact')}}" class="nav-item nav-link">Contact</a>
+            <a href="{{route('contact')}}" class="nav-item nav-link @if(request()->routeIs('contact')) active @endif">Contact</a>
             @auth
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">{{auth()->user()->name}}</a>
