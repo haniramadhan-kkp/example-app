@@ -1,4 +1,4 @@
-@extends('layouts.guest')
+@extends('admin.layouts.guest')
 
 @section('content')
     <div class="col-lg-6">
